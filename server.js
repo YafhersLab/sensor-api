@@ -53,5 +53,7 @@ app.get("/canales", (req, res) => {
   });
 });
 
-// Servidor en puerto 3000
-app.listen(3000, () => console.log("Servidor activo"));
+// ================= HTTP y HTTPS =================
+// Para que tu A7670G pueda conectarse via HTTP plano
+const http = require("http");
+http.createServer(app).listen(3000, () => console.log("Servidor HTTP activo en puerto 3000"));
